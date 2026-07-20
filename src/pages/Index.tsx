@@ -111,7 +111,7 @@ export default function Index() {
       {/* Hero */}
       <section id="top" className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,theme(colors.indigo.100),transparent_50%)]" />
-        <div className="container mx-auto px-4 py-20 md:py-28 relative">
+        <div className="container mx-auto px-4 py-16 md:py-20 relative">
           <div className="max-w-3xl mx-auto text-center animate-[fadeIn_0.8s_ease-out]">
             <span className="inline-block px-4 py-1 rounded-full bg-indigo-100 text-indigo-700 text-sm font-semibold mb-4">
               AWS Network Engineer · Open to Work
@@ -138,7 +138,7 @@ export default function Index() {
       </section>
 
       {/* About – Job Seeker */}
-      <section id="about" className="py-16 bg-white">
+      <section id="about" className="py-10 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div className="flex flex-col items-center md:items-start">
@@ -186,9 +186,9 @@ export default function Index() {
       </section>
 
       {/* Skills */}
-      <section id="services" className="py-16 bg-slate-50">
+      <section id="services" className="py-10 bg-slate-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">Technical Skills</h2>
+          <h2 className="text-3xl font-bold text-center text-slate-900 mb-8">Technical Skills</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {services.map((s) => (
               <div key={s.title} className="bg-white rounded-3xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
@@ -210,18 +210,18 @@ export default function Index() {
       </section>
 
       {/* Learning Path */}
-      <section id="learning" className="py-16 bg-white">
+      <section id="learning" className="py-10 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center gap-2 mb-4">
             <GraduationCap className="w-7 h-7 text-indigo-600" />
             <h2 className="text-3xl font-bold text-slate-900">Learning Path & Roadmap</h2>
           </div>
-          <p className="text-center text-slate-500 max-w-2xl mx-auto mb-12">
+          <p className="text-center text-slate-500 max-w-2xl mx-auto mb-8">
             Currently a cloud student at DCI Digital Career Institute, expanding into Microsoft Azure while building on a strong telecom & AWS foundation.
           </p>
 
           <h3 className="text-xl font-bold text-slate-800 mb-6 text-center">What I've Learned So Far</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
             {learnedSkills.map((s) => (
               <div key={s.title} className="bg-slate-50 rounded-2xl p-5 border border-slate-100 text-center">
                 <div className="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center mx-auto mb-3">
@@ -257,9 +257,9 @@ export default function Index() {
       </section>
 
       {/* Why Me */}
-      <section id="why" className="py-16 bg-slate-50">
+      <section id="why" className="py-10 bg-slate-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">Why Hire Me</h2>
+          <h2 className="text-3xl font-bold text-center text-slate-900 mb-8">Why Hire Me</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyUs.map((w) => (
               <div key={w.title} className="flex gap-3 p-5 rounded-2xl bg-white border border-slate-100">
@@ -275,7 +275,7 @@ export default function Index() {
       </section>
 
       {/* Experience & Certs */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-white">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-10">
           <div>
             <h2 className="text-3xl font-bold text-slate-900 mb-8">Experience</h2>
@@ -321,9 +321,9 @@ export default function Index() {
       </section>
 
       {/* Industries */}
-      <section id="industries" className="py-16 bg-slate-50">
+      <section id="industries" className="py-10 bg-slate-50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-slate-900 mb-10">Sectors I've Worked In</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">Sectors I've Worked In</h2>
           <div className="flex flex-wrap justify-center gap-3">
             {industries.map((i) => (
               <span key={i} className="px-5 py-2 rounded-full bg-white text-slate-700 font-medium hover:bg-indigo-100 hover:text-indigo-700 transition-colors border border-slate-100">
@@ -335,7 +335,7 @@ export default function Index() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-16 bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
+      <section id="contact" className="py-10 bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Let's Connect</h2>
           <p className="mb-8 opacity-90 max-w-xl mx-auto">

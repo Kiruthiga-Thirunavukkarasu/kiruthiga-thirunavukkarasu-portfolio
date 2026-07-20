@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import CursorTrail from "@/components/CursorTrail";
+import ThreeDCard from "@/components/ThreeDCard";
 
 /* ---------- Data ---------- */
 const navLinks = [
@@ -143,9 +144,9 @@ function Counter({ value, suffix, label }: { value: number; suffix: string; labe
 /* ---------- Components ---------- */
 function HeroCloudArt() {
   return (
-    <div className="relative w-full max-w-md mx-auto">
+    <div className="relative w-full max-w-md mx-auto [perspective:1000px]">
       <div className="absolute inset-0 bg-gradient-to-br from-[#FF9900]/20 to-[#0078D4]/20 blur-3xl rounded-full" />
-      <svg viewBox="0 0 400 300" className="relative w-full drop-shadow-xl">
+      <svg viewBox="0 0 400 300" className="relative w-full drop-shadow-2xl [transform:rotateX(8deg)_rotateY(-8deg)] transition-transform duration-500 hover:[transform:rotateX(0deg)_rotateY(0deg)]">
         <defs>
           <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stopColor="#FF9900" /><stop offset="100%" stopColor="#0078D4" />
@@ -159,9 +160,20 @@ function HeroCloudArt() {
         <path d="M160 170 H240" stroke="url(#g1)" strokeWidth="2" />
         <path d="M120 150 H80 M280 150 H320" stroke="url(#g1)" strokeWidth="2" strokeDasharray="4 4" className="animate-pulse" />
       </svg>
-      <div className="absolute -top-4 -left-4 w-3 h-3 bg-[#FF9900] rounded-full animate-bounce" />
-      <div className="absolute -bottom-4 -right-4 w-4 h-4 bg-[#0078D4] rounded-full animate-bounce" style={{ animationDelay: "0.7s" }} />
+      <div className="absolute -top-4 -left-4 w-3 h-3 bg-[#FF9900] rounded-full animate-bounce shadow-lg" />
+      <div className="absolute -bottom-4 -right-4 w-4 h-4 bg-[#0078D4] rounded-full animate-bounce shadow-lg" style={{ animationDelay: "0.7s" }} />
     </div>
+  );
+}
+
+function Btn3D({ href, children, className = "" }: { href: string; children: React.ReactNode; className?: string }) {
+  return (
+    <a
+      href={href}
+      className={`inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 font-semibold transition-all duration-200 shadow-[0_6px_0_0_rgba(0,0,0,0.15)] hover:shadow-[0_3px_0_0_rgba(0,0,0,0.15)] hover:translate-y-[3px] active:shadow-none active:translate-y-[6px] ${className}`}
+    >
+      {children}
+    </a>
   );
 }
 
@@ -200,7 +212,7 @@ export default function Index() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors font-sans">
+    <div className="min-h-screen bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors font-sans [perspective:1200px]">
       <CursorTrail />
 
       {/* SEO / Schema */}
@@ -253,15 +265,15 @@ export default function Index() {
         <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:40px_40px]" />
         <div className="container mx-auto px-4 py-16 md:py-24 relative grid md:grid-cols-2 gap-10 items-center">
           <div className="text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-[#FF9900] to-[#0078D4] bg-clip-text text-transparent">Kiruthiga Thirunavukkarasu</h1>
+            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-[#FF9900] to-[#0078D4] bg-clip-text text-transparent [text-shadow:0_2px_4px_rgba(0,0,0,0.1)]">Kiruthiga Thirunavukkarasu</h1>
             <p className="text-lg md:text-xl font-semibold text-slate-700 dark:text-slate-200 h-7 mb-6">{typed}<span className="animate-pulse">|</span></p>
             <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 max-w-xl">
               Cloud Networking Engineer with 10+ years of experience designing and optimizing telecommunications core networks at Nokia and Reliance Communications. AWS Certified Solutions Architect currently expanding expertise in Microsoft Azure, Python, Docker, GitHub, and Cloud Automation. Passionate about building secure, scalable, and resilient cloud infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 mt-8 justify-center md:justify-start">
-              <a href="#" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#FF9900] text-white px-6 py-3 font-semibold hover:opacity-90 transition"><Download className="w-4 h-4" /> Download Resume</a>
-              <a href="#projects" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#0078D4] text-white px-6 py-3 font-semibold hover:opacity-90 transition"><Rocket className="w-4 h-4" /> View Projects</a>
-              <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 dark:border-slate-700 px-6 py-3 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition">Contact Me</a>
+              <Btn3D href="#" className="bg-[#FF9900] text-white"> <Download className="w-4 h-4" /> Download Resume</Btn3D>
+              <Btn3D href="#projects" className="bg-[#0078D4] text-white"> <Rocket className="w-4 h-4" /> View Projects</Btn3D>
+              <Btn3D href="#contact" className="border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">Contact Me</Btn3D>
             </div>
           </div>
           <Reveal className="order-first md:order-last">
@@ -296,17 +308,19 @@ export default function Index() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {skillGroups.map((g) => (
               <Reveal key={g.title}>
-                <div className="backdrop-blur bg-white/70 dark:bg-slate-800/60 rounded-2xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:-translate-y-1 transition-transform">
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${g.accent} flex items-center justify-center mb-4`}>
-                    <g.icon className="w-6 h-6 text-white" />
+                <ThreeDCard className="h-full">
+                  <div className="backdrop-blur bg-white/70 dark:bg-slate-800/60 rounded-2xl p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.25)] border border-slate-200 dark:border-slate-700 h-full">
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${g.accent} flex items-center justify-center mb-4 shadow-lg`}>
+                      <g.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="font-bold text-lg mb-3">{g.title}</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {g.items.map((i) => (
+                        <span key={i} className="text-xs px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">{i}</span>
+                      ))}
+                    </div>
                   </div>
-                  <h3 className="font-bold text-lg mb-3">{g.title}</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {g.items.map((i) => (
-                      <span key={i} className="text-xs px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200">{i}</span>
-                    ))}
-                  </div>
-                </div>
+                </ThreeDCard>
               </Reveal>
             ))}
           </div>
@@ -320,17 +334,19 @@ export default function Index() {
           <div className="relative border-l-2 border-gradient-to-b from-[#FF9900] to-[#0078D4] pl-6 space-y-8">
             {experience.map((e) => (
               <Reveal key={e.company + e.period}>
-                <div className="absolute -left-[9px] w-4 h-4 rounded-full bg-[#FF9900] border-2 border-white dark:border-slate-950" />
-                <div className="backdrop-blur bg-white/70 dark:bg-slate-800/60 rounded-2xl p-6 shadow-md border border-slate-200 dark:border-slate-700">
-                  <div className="flex flex-wrap justify-between items-center gap-2">
-                    <h3 className="font-bold text-lg">{e.company}</h3>
-                    <span className="text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-700">{e.period}</span>
+                <div className="absolute -left-[9px] w-4 h-4 rounded-full bg-[#FF9900] border-2 border-white dark:border-slate-950 shadow-md" />
+                <ThreeDCard>
+                  <div className="backdrop-blur bg-white/70 dark:bg-slate-800/60 rounded-2xl p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.2)] border border-slate-200 dark:border-slate-700">
+                    <div className="flex flex-wrap justify-between items-center gap-2">
+                      <h3 className="font-bold text-lg">{e.company}</h3>
+                      <span className="text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-700 shadow-sm">{e.period}</span>
+                    </div>
+                    <p className="text-sm font-medium text-[#0078D4] mb-2">{e.role}</p>
+                    <ul className="text-sm text-slate-600 dark:text-slate-300 space-y-1">
+                      {e.points.map((p) => <li key={p} className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-[#FF9900] shrink-0 mt-0.5" /> {p}</li>)}
+                    </ul>
                   </div>
-                  <p className="text-sm font-medium text-[#0078D4] mb-2">{e.role}</p>
-                  <ul className="text-sm text-slate-600 dark:text-slate-300 space-y-1">
-                    {e.points.map((p) => <li key={p} className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-[#FF9900] shrink-0 mt-0.5" /> {p}</li>)}
-                  </ul>
-                </div>
+                </ThreeDCard>
               </Reveal>
             ))}
           </div>
@@ -344,16 +360,18 @@ export default function Index() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((p) => (
               <Reveal key={p.title}>
-                <div className="backdrop-blur bg-white/70 dark:bg-slate-800/60 rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-700 hover:-translate-y-1 transition-transform">
-                  <img src={p.img} alt={p.title} className="w-full h-40 object-cover" loading="lazy" />
-                  <div className="p-5">
-                    <h3 className="font-bold text-lg mb-1">{p.title}</h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-300 mb-3">{p.desc}</p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {p.tags.map((t) => <span key={t} className="text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-700">{t}</span>)}
+                <ThreeDCard className="h-full">
+                  <div className="backdrop-blur bg-white/70 dark:bg-slate-800/60 rounded-2xl overflow-hidden shadow-[0_12px_35px_-12px_rgba(0,0,0,0.3)] border border-slate-200 dark:border-slate-700 h-full">
+                    <img src={p.img} alt={p.title} className="w-full h-40 object-cover" loading="lazy" />
+                    <div className="p-5">
+                      <h3 className="font-bold text-lg mb-1">{p.title}</h3>
+                      <p className="text-sm text-slate-600 dark:text-slate-300 mb-3">{p.desc}</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {p.tags.map((t) => <span key={t} className="text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-700">{t}</span>)}
+                      </div>
                     </div>
                   </div>
-                </div>
+                </ThreeDCard>
               </Reveal>
             ))}
           </div>
@@ -367,15 +385,17 @@ export default function Index() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
             {certs.map((c) => (
               <Reveal key={c.name}>
-                <div className="flex items-center gap-4 backdrop-blur bg-white/70 dark:bg-slate-800/60 rounded-2xl p-5 shadow border border-slate-200 dark:border-slate-700">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FF9900] to-[#0078D4] flex items-center justify-center shrink-0">
-                    <c.icon className="w-5 h-5 text-white" />
+                <ThreeDCard>
+                  <div className="flex items-center gap-4 backdrop-blur bg-white/70 dark:bg-slate-800/60 rounded-2xl p-5 shadow-[0_8px_25px_-10px_rgba(0,0,0,0.2)] border border-slate-200 dark:border-slate-700">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FF9900] to-[#0078D4] flex items-center justify-center shrink-0 shadow-md">
+                      <c.icon className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-sm">{c.name}</p>
+                      <p className={`text-xs font-medium ${c.status === "Done" ? "text-[#FF9900]" : "text-[#0078D4]"}`}>{c.status}</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-semibold text-sm">{c.name}</p>
-                    <p className={`text-xs font-medium ${c.status === "Done" ? "text-[#FF9900]" : "text-[#0078D4]"}`}>{c.status}</p>
-                  </div>
-                </div>
+                </ThreeDCard>
               </Reveal>
             ))}
           </div>
@@ -389,12 +409,14 @@ export default function Index() {
           <div className="space-y-4">
             {roadmap.map((r) => (
               <Reveal key={r.phase}>
-                <div className="flex gap-4 items-start backdrop-blur bg-white/70 dark:bg-slate-800/60 rounded-2xl p-5 shadow border border-slate-200 dark:border-slate-700">
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold shrink-0 ${r.color}`}>{r.phase}</span>
-                  <div className="flex flex-wrap gap-2">
-                    {r.items.map((i) => <span key={i} className="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700">{i}</span>)}
+                <ThreeDCard>
+                  <div className="flex gap-4 items-start backdrop-blur bg-white/70 dark:bg-slate-800/60 rounded-2xl p-5 shadow-[0_8px_25px_-10px_rgba(0,0,0,0.2)] border border-slate-200 dark:border-slate-700">
+                    <span className={`px-3 py-1 rounded-full text-xs font-semibold shrink-0 ${r.color} shadow-sm`}>{r.phase}</span>
+                    <div className="flex flex-wrap gap-2">
+                      {r.items.map((i) => <span key={i} className="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700">{i}</span>)}
+                    </div>
                   </div>
-                </div>
+                </ThreeDCard>
               </Reveal>
             ))}
           </div>
@@ -408,13 +430,15 @@ export default function Index() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyUs.map((w) => (
               <Reveal key={w.title}>
-                <div className="backdrop-blur bg-white/70 dark:bg-slate-800/60 rounded-2xl p-6 shadow-lg border border-slate-200 dark:border-slate-700 hover:-translate-y-1 transition-transform">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#FF9900] to-[#0078D4] flex items-center justify-center mb-4">
-                    <w.icon className="w-6 h-6 text-white" />
+                <ThreeDCard className="h-full">
+                  <div className="backdrop-blur bg-white/70 dark:bg-slate-800/60 rounded-2xl p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.25)] border border-slate-200 dark:border-slate-700 h-full">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#FF9900] to-[#0078D4] flex items-center justify-center mb-4 shadow-lg">
+                      <w.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="font-bold mb-2">{w.title}</h3>
+                    <p className="text-sm text-slate-600 dark:text-slate-300">{w.desc}</p>
                   </div>
-                  <h3 className="font-bold mb-2">{w.title}</h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-300">{w.desc}</p>
-                </div>
+                </ThreeDCard>
               </Reveal>
             ))}
           </div>
@@ -454,7 +478,7 @@ export default function Index() {
 
       {/* Back to top */}
       {showTop && (
-        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-gradient-to-br from-[#FF9900] to-[#0078D4] text-white shadow-lg hover:opacity-90" aria-label="Back to top">
+        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-gradient-to-br from-[#FF9900] to-[#0078D4] text-white shadow-[0_6px_15px_-3px_rgba(0,0,0,0.3)] hover:opacity-90" aria-label="Back to top">
           <ArrowUp className="w-5 h-5" />
         </button>
       )}

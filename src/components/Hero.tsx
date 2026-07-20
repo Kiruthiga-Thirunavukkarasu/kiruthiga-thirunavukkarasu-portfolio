@@ -48,7 +48,7 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-3xl blur-2xl opacity-30" />
               <img
-                src="/Img/1.jpeg"
+                src="/media/IMG_7587-transformed.jpeg"
                 alt="Kiruthiga Thirunavukkarasu"
                 className="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl object-cover border border-slate-700 shadow-2xl"
               />

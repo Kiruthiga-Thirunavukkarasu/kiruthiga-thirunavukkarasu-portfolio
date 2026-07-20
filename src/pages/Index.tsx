@@ -56,7 +56,7 @@ const whyUs = [
 ];
 
 const experience = [
-  { period: "2005 – 2007", role: "Core Planning Engineer", company: "Reliance Communications", loc: "Pan-Indien", points: ["Analyse & Modellierung von Core-Netzwerken", "Optimierung 2G/3G Kapazitätsplanung", "3GPP-Standardkonformität"] },
+  { period: "2005 – 2007", role: "Core Planning Engineer", company: "Reliance Communications", loc: "Mumbai, Indien", points: ["Analyse & Modellierung von Core-Netzwerken", "Optimierung 2G/3G Kapazitätsplanung", "3GPP-Standardkonformität", "Core Planning & Telecom Engineering Ausbildung (Mumbai)"] },
   { period: "2007 – 2016", role: "Core Planning Engineer", company: "Nokia Solutions Networks", loc: "Pan-Indien", points: ["Planung & Optimierung großskaliger Kernnetzarchitekturen (2G–4G, IMS)", "Konfiguration & Troubleshooting von Cisco-Routern/Switches", "Netzwerksicherheitskonzepte & Latenzanalyse"] },
   { period: "2016 – 2023", role: "Homemaker & German Language Learning", company: "Familie & Weiterbildung", loc: "Bonn", points: ["Umzug nach Deutschland 2016", "Deutsch Lernphase A1 bis C1 absolviert", "Deutsch C1 zertifiziert", "AWS SAA-C03 (Solutions Architect Associate) erreicht"] },
   { period: "2024 – heute", role: "Case Handling Engineer", company: "Nokia Solutions Networks", loc: "Bonn", points: ["Planung & Optimierung großskaliger Kernnetzarchitekturen (2G–4G, IMS)", "Konfiguration & Troubleshooting von Cisco-Routern/Switches", "Netzwerksicherheitskonzepte & Latenzanalyse"] },
@@ -357,7 +357,6 @@ export default function Index() {
             <div className="mt-6 bg-slate-900 rounded-lg p-6 text-white">
               <h3 className="font-bold text-lg mb-2">Education</h3>
               <p className="text-sm opacity-90">Electronics & Communication Engineering — Anna University Chennai (2001–2005)</p>
-              <p className="text-sm opacity-90 mt-1">Core Planning & Telecom Engineering — Mumbai, India (2005–2007)</p>
             </div>
           </Reveal>
         </div>

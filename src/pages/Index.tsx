@@ -46,9 +46,10 @@ const whyUs = [
 ];
 
 const experience = [
-  { period: "01/2024 – heute", role: "Case Handling Engineer", company: "Nokia Solutions Networks", loc: "Bonn", points: ["Planung & Optimierung großskaliger Kernnetzarchitekturen (2G–4G, IMS)", "Konfiguration & Troubleshooting von Cisco-Routern/Switches", "Netzwerksicherheitskonzepte & Latenzanalyse"] },
-  { period: "06/2016 – 12/2023", role: "Homemaker & Integration", company: "Familie & Weiterbildung", loc: "Bonn", points: ["Umzug nach Deutschland 2016", "Deutsch C1 zertifiziert", "AWS / Azure Weiterbildung bei DCI"] },
-  { period: "10/2007 – 06/2016", role: "Core Planning Engineer", company: "Reliance Communications", loc: "Pan-Indien", points: ["Analyse & Modellierung von Core-Netzwerken", "Optimierung 2G/3G Kapazitätsplanung", "3GPP-Standardkonformität"] },
+  { period: "2005 – 2007", role: "Core Planning Engineer", company: "Reliance Communications", loc: "Pan-Indien", points: ["Analyse & Modellierung von Core-Netzwerken", "Optimierung 2G/3G Kapazitätsplanung", "3GPP-Standardkonformität"] },
+  { period: "2007 – 2016", role: "Core Planning Engineer", company: "Nokia Solutions Networks", loc: "Pan-Indien", points: ["Planung & Optimierung großskaliger Kernnetzarchitekturen (2G–4G, IMS)", "Konfiguration & Troubleshooting von Cisco-Routern/Switches", "Netzwerksicherheitskonzepte & Latenzanalyse"] },
+  { period: "2016 – 2023", role: "Homemaker & Integration", company: "Familie & Weiterbildung", loc: "Bonn", points: ["Umzug nach Deutschland 2016", "Deutsch C1 zertifiziert", "AWS SAA-C03 zertifiziert"] },
+  { period: "2024 – heute", role: "Case Handling Engineer", company: "Nokia Solutions Networks", loc: "Bonn", points: ["Planung & Optimierung großskaliger Kernnetzarchitekturen (2G–4G, IMS)", "Konfiguration & Troubleshooting von Cisco-Routern/Switches", "Netzwerksicherheitskonzepte & Latenzanalyse"] },
 ];
 
 const certs = [
@@ -281,7 +282,7 @@ export default function Index() {
             <h2 className="text-3xl font-bold text-slate-900 mb-8">Experience</h2>
             <div className="space-y-6">
               {experience.map((e) => (
-                <div key={e.role} className="border-l-2 border-indigo-200 pl-5">
+                <div key={e.role + e.period} className="border-l-2 border-indigo-200 pl-5">
                   <p className="text-xs font-semibold text-indigo-600">{e.period}</p>
                   <h4 className="font-bold text-slate-800">{e.role}</h4>
                   <p className="text-sm text-slate-500">{e.company} · {e.loc}</p>
@@ -292,11 +293,12 @@ export default function Index() {
               ))}
               <div className="border-l-2 border-amber-200 pl-5">
                 <p className="text-xs font-semibold text-amber-600">2026 – laufend</p>
-                <h4 className="font-bold text-slate-800">Cloud Student (Azure)</h4>
+                <h4 className="font-bold text-slate-800">Cloud Student (Azure) & CCNP ENCOR</h4>
                 <p className="text-sm text-slate-500">DCI Digital Career Institute · Bonn</p>
                 <ul className="text-sm text-slate-600 space-y-0.5 mt-1">
                   <li>– Python, GitHub, HTML, Docker Grundlagen</li>
                   <li>– Microsoft Azure Fundamentals & Cloud Practice</li>
+                  <li>– CCNP ENCOR Weiterbildung (enterprise networking)</li>
                 </ul>
               </div>
             </div>

@@ -37,12 +37,12 @@ const services = [
 const industries = ["Telecommunications", "Nokia", "Reliance India"];
 
 const whyUs = [
-  { title: "10+ Years Experience", desc: "Deep roots in complex enterprise networking and critical telco infrastructure." },
-  { title: "AWS Certified", desc: "Rigorously trained Solutions Architect expertise driving best-practice deployments." },
-  { title: "Dual Domain Expertise", desc: "Rare blend of telecom core and agile public cloud skillsets." },
-  { title: "Cost-Effective", desc: "Tailored, pragmatic designs that maximize performance per dollar spent." },
-  { title: "International Outlook", desc: "Diverse background with a broad understanding of tech standards." },
-  { title: "Personal Support", desc: "Dedicated consultant attention without corporate bureaucracy." },
+  { title: "10+ Years Experience", desc: "A decade of hands-on telecom core network planning at Nokia and Reliance." },
+  { title: "AWS Certified", desc: "AWS Solutions Architect Associate certified, applying cloud best practices." },
+  { title: "Dual Domain Skills", desc: "Rare combination of deep telecom knowledge and modern cloud abilities." },
+  { title: "Quick Learner", desc: "Actively training in Azure, Python and Docker alongside my telco background." },
+  { title: "International Background", desc: "Worked in India and Germany with strong cross-cultural adaptability." },
+  { title: "Motivated Team Player", desc: "Reliable, eager to contribute, and ready to grow with your team." },
 ];
 
 const experience = [
@@ -260,7 +260,7 @@ export default function Index() {
       {/* Why Me */}
       <section id="why" className="py-10 bg-slate-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-slate-900 mb-8">Why Hire Me</h2>
+          <h2 className="text-3xl font-bold text-center text-slate-900 mb-8">Why Me</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyUs.map((w) => (
               <div key={w.title} className="flex gap-3 p-5 rounded-2xl bg-white border border-slate-100">

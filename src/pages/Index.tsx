@@ -141,9 +141,14 @@ export default function Index() {
       <section id="about" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div>
+            <div className="flex flex-col items-center md:items-start">
+              <img
+                src="/media/d69b5ac96a93226872cfe141fa3e6191351150a9346f0236cbe39b5371fe6f0b.JPG"
+                alt="Kiruthiga Thirunavukkarasu"
+                className="w-48 h-48 rounded-full object-cover border-4 border-indigo-100 shadow-md mb-4"
+              />
               <h2 className="text-3xl font-bold text-slate-900 mb-4">About Me</h2>
-              <p className="text-slate-600 mb-4 leading-relaxed">
+              <p className="text-slate-600 mb-3 leading-relaxed">
                 I'm a cloud networking professional with over 10 years of experience in telecommunications
                 and core network planning at global leaders like Nokia and Reliance. After a successful
                 integration phase in Germany (Deutsch C1 certified), I'm now expanding into modern cloud
@@ -162,7 +167,7 @@ export default function Index() {
             </div>
             <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100">
               <h3 className="font-bold text-lg mb-4 text-slate-800">Contact & Profiles</h3>
-              <div className="space-y-3 text-sm">
+              <div className="space-y-2 text-sm">
                 <p className="flex items-center gap-2"><Mail className="w-4 h-4 text-indigo-500" /> kithucherry@gmail.com</p>
                 <p className="flex items-center gap-2"><Phone className="w-4 h-4 text-indigo-500" /> +49 176 650 627 31</p>
                 <p className="flex items-center gap-2"><MapPin className="w-4 h-4 text-indigo-500" /> Michaelplatz-1, 53177 Bonn, Deutschland</p>
@@ -191,7 +196,7 @@ export default function Index() {
                   <s.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="font-bold text-lg mb-3 text-slate-800">{s.title}</h3>
-                <ul className="space-y-2 text-sm text-slate-600">
+                <ul className="space-y-1 text-sm text-slate-600">
                   {s.items.map((i) => (
                     <li key={i} className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" /> {i}
@@ -280,7 +285,7 @@ export default function Index() {
                   <p className="text-xs font-semibold text-indigo-600">{e.period}</p>
                   <h4 className="font-bold text-slate-800">{e.role}</h4>
                   <p className="text-sm text-slate-500 mb-2">{e.company} · {e.loc}</p>
-                  <ul className="text-sm text-slate-600 space-y-1">
+                  <ul className="text-sm text-slate-600 space-y-0.5">
                     {e.points.map((p) => <li key={p}>– {p}</li>)}
                   </ul>
                 </div>
@@ -289,7 +294,7 @@ export default function Index() {
                 <p className="text-xs font-semibold text-amber-600">2026 – laufend</p>
                 <h4 className="font-bold text-slate-800">Cloud Student (Azure)</h4>
                 <p className="text-sm text-slate-500 mb-2">DCI Digital Career Institute · Bonn</p>
-                <ul className="text-sm text-slate-600 space-y-1">
+                <ul className="text-sm text-slate-600 space-y-0.5">
                   <li>– Python, GitHub, HTML, Docker Grundlagen</li>
                   <li>– Microsoft Azure Fundamentals & Cloud Practice</li>
                 </ul>

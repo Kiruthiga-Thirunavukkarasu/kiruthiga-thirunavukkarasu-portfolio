@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, MapPin, Linkedin, Github, Cloud, Shield, Network, Phone, ArrowRight, CheckCircle2, Menu, X } from "lucide-react";
+import { Mail, MapPin, Linkedin, Github, Cloud, Shield, Network, Phone, ArrowRight, CheckCircle2, Menu, X, GraduationCap, BookOpen, Route } from "lucide-react";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const navLinks = [
   { href: "#about", label: "About" },
   { href: "#services", label: "Services" },
+  { href: "#learning", label: "Learning" },
   { href: "#why", label: "Why Us" },
   { href: "#industries", label: "Industries" },
   { href: "#contact", label: "Contact" },
@@ -51,11 +52,26 @@ const experience = [
 ];
 
 const certs = [
-  "AWS Certified Solutions Architect – Associate (SAA-C03)",
+  "AWS Certified Solutions Architect – Associate (SAA-C03) — Done",
   "Oracle Cloud Infrastructure AI Associate",
   "Deutsch C1 Zertifiziert",
   "Agile Scrum Master (PSM I)",
   "CCNA / Cisco Router Vorbereitung",
+  "CCNP ENCOR — Weiterbildung in progress",
+];
+
+const learnedSkills = [
+  { icon: BookOpen, title: "Python Fundamentals", desc: "Core syntax, data structures, scripting basics for automation." },
+  { icon: Github, title: "GitHub", desc: "Version control, repositories, branching, pull requests & collaboration." },
+  { icon: BookOpen, title: "HTML", desc: "Semantic markup, page structure, and web fundamentals." },
+  { icon: Cloud, title: "Docker", desc: "Container basics, images, volumes, and running containers locally." },
+];
+
+const roadmap = [
+  { step: "AWS SAA-C03", status: "Done", desc: "Certified Solutions Architect Associate completed." },
+  { step: "DCI Cloud Training (Azure)", status: "In Progress", desc: "Student at DCI Digital Career Institute — learning Microsoft Azure, Python, GitHub, HTML, Docker." },
+  { step: "CCNP ENCOR", status: "In Progress", desc: "Weiterbildung in enterprise networking (ENCOR) underway." },
+  { step: "Azure Administrator / Solutions", status: "Planned", desc: "Targeting Azure certs after fundamentals." },
 ];
 
 export default function Index() {
@@ -106,14 +122,14 @@ export default function Index() {
             <p className="text-lg md:text-xl text-slate-600 mb-2 font-medium">Cloud Networking · VoIP & Telecom Specialist</p>
             <p className="text-base md:text-lg text-slate-500 mb-8 max-w-2xl mx-auto">
               Network & Telekommunikationsexpertin with 10+ years planning core infrastructures (3G–5G)
-              at Nokia & Reliance — now combining telecom rigor with AWS cloud architecture.
+              at Nokia & Reliance — now combining telecom rigor with AWS cloud architecture and active Azure training at DCI.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 font-semibold transition-colors">
                 Get in Touch <ArrowRight className="w-4 h-4" />
               </a>
-              <a href="#services" className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-slate-200 hover:border-indigo-300 px-6 py-3 font-semibold transition-colors">
-                Explore Services
+              <a href="#learning" className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-slate-200 hover:border-indigo-300 px-6 py-3 font-semibold transition-colors">
+                My Learning Path
               </a>
             </div>
           </div>
@@ -185,13 +201,60 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Learning Path */}
+      <section id="learning" className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <GraduationCap className="w-7 h-7 text-indigo-600" />
+            <h2 className="text-3xl font-bold text-slate-900">Learning Path & Roadmap</h2>
+          </div>
+          <p className="text-center text-slate-500 max-w-2xl mx-auto mb-12">
+            Currently a cloud student at DCI Digital Career Institute, expanding into Microsoft Azure while building on a strong telecom & AWS foundation.
+          </p>
+
+          <h3 className="text-xl font-bold text-slate-800 mb-6 text-center">What I've Learned So Far</h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+            {learnedSkills.map((s) => (
+              <div key={s.title} className="bg-slate-50 rounded-2xl p-5 border border-slate-100 text-center">
+                <div className="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center mx-auto mb-3">
+                  <s.icon className="w-5 h-5 text-indigo-600" />
+                </div>
+                <h4 className="font-semibold text-slate-800 mb-1">{s.title}</h4>
+                <p className="text-sm text-slate-600">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="text-xl font-bold text-slate-800 mb-6 flex items-center justify-center gap-2">
+            <Route className="w-5 h-5 text-indigo-600" /> My Roadmap
+          </h3>
+          <div className="max-w-2xl mx-auto space-y-4">
+            {roadmap.map((r) => (
+              <div key={r.step} className="flex items-start gap-4 bg-slate-50 rounded-2xl p-4 border border-slate-100">
+                <span className={`px-3 py-1 rounded-full text-xs font-semibold shrink-0 ${
+                  r.status === "Done" ? "bg-emerald-100 text-emerald-700" :
+                  r.status === "In Progress" ? "bg-amber-100 text-amber-700" :
+                  "bg-slate-200 text-slate-600"
+                }`}>
+                  {r.status}
+                </span>
+                <div>
+                  <h4 className="font-semibold text-slate-800">{r.step}</h4>
+                  <p className="text-sm text-slate-600">{r.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Why Us */}
-      <section id="why" className="py-16 bg-white">
+      <section id="why" className="py-16 bg-slate-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">Why Partner With Us</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyUs.map((w) => (
-              <div key={w.title} className="flex gap-3 p-5 rounded-2xl bg-slate-50 border border-slate-100">
+              <div key={w.title} className="flex gap-3 p-5 rounded-2xl bg-white border border-slate-100">
                 <CheckCircle2 className="w-5 h-5 text-indigo-500 shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-semibold text-slate-800">{w.title}</h4>
@@ -204,7 +267,7 @@ export default function Index() {
       </section>
 
       {/* Experience & Certs */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-10">
           <div>
             <h2 className="text-3xl font-bold text-slate-900 mb-8">Experience</h2>
@@ -219,13 +282,22 @@ export default function Index() {
                   </ul>
                 </div>
               ))}
+              <div className="border-l-2 border-amber-200 pl-5">
+                <p className="text-xs font-semibold text-amber-600">2026 – laufend</p>
+                <h4 className="font-bold text-slate-800">Cloud Student (Azure)</h4>
+                <p className="text-sm text-slate-500 mb-2">DCI Digital Career Institute · Bonn</p>
+                <ul className="text-sm text-slate-600 space-y-1">
+                  <li>– Python, GitHub, HTML, Docker Grundlagen</li>
+                  <li>– Microsoft Azure Fundamentals & Cloud Practice</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div>
             <h2 className="text-3xl font-bold text-slate-900 mb-8">Certifications</h2>
             <div className="space-y-3">
               {certs.map((c) => (
-                <div key={c} className="flex items-center gap-3 bg-white rounded-xl p-4 border border-slate-100 shadow-sm">
+                <div key={c} className="flex items-center gap-3 bg-slate-50 rounded-xl p-4 border border-slate-100 shadow-sm">
                   <Shield className="w-5 h-5 text-emerald-500 shrink-0" />
                   <span className="text-sm font-medium text-slate-700">{c}</span>
                 </div>
@@ -241,12 +313,12 @@ export default function Index() {
       </section>
 
       {/* Industries */}
-      <section id="industries" className="py-16 bg-white">
+      <section id="industries" className="py-16 bg-slate-50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-slate-900 mb-10">Industries We Support</h2>
           <div className="flex flex-wrap justify-center gap-3">
             {industries.map((i) => (
-              <span key={i} className="px-5 py-2 rounded-full bg-slate-100 text-slate-700 font-medium hover:bg-indigo-100 hover:text-indigo-700 transition-colors">
+              <span key={i} className="px-5 py-2 rounded-full bg-white text-slate-700 font-medium hover:bg-indigo-100 hover:text-indigo-700 transition-colors border border-slate-100">
                 {i}
               </span>
             ))}

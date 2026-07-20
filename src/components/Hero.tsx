@@ -25,7 +25,7 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a
-                href="/Downloads/1.jpeg"
+                href="/media/IMG_7587-transformed.jpeg"
                 download
                 className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 px-6 py-3 font-semibold text-white hover:opacity-90 transition-opacity shadow-lg"
               >
@@ -48,7 +48,7 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-3xl blur-2xl opacity-30" />
               <img
-                src="/media/IMG_7587-transformed.jpeg"
+                src="/Downloads/1.jpeg"
                 alt="Kiruthiga Thirunavukkarasu"
                 className="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl object-cover border border-slate-700 shadow-2xl"
               />

@@ -346,12 +346,8 @@ export default function Index() {
                   <div className="p-5">
                     <h3 className="font-bold text-lg mb-1">{p.title}</h3>
                     <p className="text-sm text-slate-600 dark:text-slate-300 mb-3">{p.desc}</p>
-                    <div className="flex flex-wrap gap-1.5 mb-4">
+                    <div className="flex flex-wrap gap-1.5">
                       {p.tags.map((t) => <span key={t} className="text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-700">{t}</span>)}
-                    </div>
-                    <div className="flex gap-2">
-                      <a href="#" className="flex-1 text-center text-sm font-medium rounded-lg border border-slate-300 dark:border-slate-600 py-2 hover:bg-slate-100 dark:hover:bg-slate-700"><Github className="w-4 h-4 inline" /> GitHub</a>
-                      <a href="#" className="flex-1 text-center text-sm font-medium rounded-lg bg-[#0078D4] text-white py-2 hover:opacity-90">Live Demo</a>
                     </div>
                   </div>
                 </div>

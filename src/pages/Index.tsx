@@ -6,9 +6,9 @@ import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const navLinks = [
   { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
+  { href: "#services", label: "Skills" },
   { href: "#learning", label: "Learning" },
-  { href: "#why", label: "Why Us" },
+  { href: "#why", label: "Why Me" },
   { href: "#industries", label: "Industries" },
   { href: "#contact", label: "Contact" },
 ];
@@ -84,7 +84,7 @@ export default function Index() {
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-2 font-bold text-lg text-indigo-700">
             <Cloud className="w-6 h-6" />
-            Cloud4All<span className="text-slate-400">Solutions</span>
+            Kiruthiga<span className="text-slate-400">.dev</span>
           </a>
           <nav className="hidden md:flex gap-6 text-sm font-medium">
             {navLinks.map((l) => (
@@ -114,7 +114,7 @@ export default function Index() {
         <div className="container mx-auto px-4 py-20 md:py-28 relative">
           <div className="max-w-3xl mx-auto text-center animate-[fadeIn_0.8s_ease-out]">
             <span className="inline-block px-4 py-1 rounded-full bg-indigo-100 text-indigo-700 text-sm font-semibold mb-4">
-              AWS Network Engineer
+              AWS Network Engineer · Open to Work
             </span>
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-4">
               Kiruthiga Thirunavukkarasu
@@ -123,6 +123,7 @@ export default function Index() {
             <p className="text-base md:text-lg text-slate-500 mb-8 max-w-2xl mx-auto">
               Network & Telekommunikationsexpertin with 10+ years planning core infrastructures (3G–5G)
               at Nokia & Reliance — now combining telecom rigor with AWS cloud architecture and active Azure training at DCI.
+              Currently seeking a cloud networking role in Germany or remote.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 font-semibold transition-colors">
@@ -136,29 +137,31 @@ export default function Index() {
         </div>
       </section>
 
-      {/* About */}
+      {/* About – Job Seeker */}
       <section id="about" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">About Cloud4All Solutions</h2>
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">About Me</h2>
               <p className="text-slate-600 mb-4 leading-relaxed">
-                We help organizations modernize IT infrastructure through secure cloud architecture,
-                enterprise networking, and digital transformation. Our mission: make cloud adoption simple,
-                secure, and affordable for businesses of all sizes.
+                I'm a cloud networking professional with over 10 years of experience in telecommunications
+                and core network planning at global leaders like Nokia and Reliance. After a successful
+                integration phase in Germany (Deutsch C1 certified), I'm now expanding into modern cloud
+                platforms — AWS certified and currently training in Microsoft Azure at DCI.
               </p>
               <p className="text-slate-600 leading-relaxed">
-                We bridge traditional telecommunications, complex hardware routing, and modern
-                software-defined cloud infrastructure to deliver end-to-end resilience.
+                I'm actively looking for a role where I can combine my deep telecom background with
+                cloud networking, security, and VoIP expertise to help teams build resilient,
+                cost-effective infrastructure.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <span className="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm font-medium">Enterprise Grade</span>
-                <span className="px-3 py-1 rounded-full bg-rose-50 text-rose-700 text-sm font-medium">Security First</span>
-                <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-sm font-medium">Cost Optimized</span>
+                <span className="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm font-medium">Open to Work</span>
+                <span className="px-3 py-1 rounded-full bg-rose-50 text-rose-700 text-sm font-medium">AWS Certified</span>
+                <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-sm font-medium">Azure Trainee</span>
               </div>
             </div>
             <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100">
-              <h3 className="font-bold text-lg mb-4 text-slate-800">Founder Profile</h3>
+              <h3 className="font-bold text-lg mb-4 text-slate-800">Contact & Profiles</h3>
               <div className="space-y-3 text-sm">
                 <p className="flex items-center gap-2"><Mail className="w-4 h-4 text-indigo-500" /> kithucherry@gmail.com</p>
                 <p className="flex items-center gap-2"><Phone className="w-4 h-4 text-indigo-500" /> +49 176 650 627 31</p>
@@ -177,10 +180,10 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Skills */}
       <section id="services" className="py-16 bg-slate-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">Our Services</h2>
+          <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">Technical Skills</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {services.map((s) => (
               <div key={s.title} className="bg-white rounded-3xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
@@ -248,10 +251,10 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Why Us */}
+      {/* Why Me */}
       <section id="why" className="py-16 bg-slate-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">Why Partner With Us</h2>
+          <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">Why Hire Me</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyUs.map((w) => (
               <div key={w.title} className="flex gap-3 p-5 rounded-2xl bg-white border border-slate-100">
@@ -315,7 +318,7 @@ export default function Index() {
       {/* Industries */}
       <section id="industries" className="py-16 bg-slate-50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-slate-900 mb-10">Industries We Support</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-10">Sectors I've Worked In</h2>
           <div className="flex flex-wrap justify-center gap-3">
             {industries.map((i) => (
               <span key={i} className="px-5 py-2 rounded-full bg-white text-slate-700 font-medium hover:bg-indigo-100 hover:text-indigo-700 transition-colors border border-slate-100">
@@ -329,9 +332,9 @@ export default function Index() {
       {/* Contact */}
       <section id="contact" className="py-16 bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Let's Build Your Cloud Future</h2>
+          <h2 className="text-3xl font-bold mb-4">Let's Connect</h2>
           <p className="mb-8 opacity-90 max-w-xl mx-auto">
-            Secure, scalable and reliable cloud solutions tailored to your business.
+            Open to cloud networking, DevOps, and telecom-cloud roles in Germany or remote.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a href="mailto:kithucherry@gmail.com" className="inline-flex items-center gap-2 bg-white text-indigo-700 rounded-full px-6 py-3 font-semibold hover:bg-slate-100 transition-colors">

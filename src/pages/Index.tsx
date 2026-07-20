@@ -14,7 +14,7 @@ const navLinks = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
+  { href: "#projects", label: "Home Lab" },
   { href: "#certs", label: "Certifications" },
   { href: "#roadmap", label: "Roadmap" },
   { href: "#why", label: "Why Me" },
@@ -41,9 +41,9 @@ const skillGroups = [
 ];
 
 const experience = [
+  { company: "Germany", role: "Career Development", period: "2016 – 2026", points: ["Family relocation.", "Achieved German C1 certification.", "AWS Solutions Architect certification.", "Continuous professional development.", "Prepared transition into Cloud Engineering."] },
   { company: "Nokia Solutions Networks", role: "Core Planning Engineer", period: "2007 – 2016", points: ["Designed and optimized nationwide telecom core networks.", "Worked with IMS architecture.", "Performed network planning.", "Capacity optimization.", "Cisco infrastructure support.", "Latency optimization.", "Cross-functional engineering collaboration."] },
   { company: "Reliance Communications", role: "Core Planning Engineer", period: "2005 – 2007", points: ["Core network planning.", "2G and 3G capacity planning.", "Network analysis.", "Telecommunications engineering.", "3GPP standards."] },
-  { company: "Germany", role: "Career Development", period: "2016 – 2026", points: ["Family relocation.", "Achieved German C1 certification.", "AWS Solutions Architect certification.", "Continuous professional development.", "Prepared transition into Cloud Engineering."] },
   { company: "DCI Digital Career Institute", role: "Cloud Engineering Student", period: "2026 – Present", points: ["Microsoft Azure.", "Python.", "GitHub.", "Docker.", "Cloud Automation.", "Linux.", "Networking."] },
 ];
 
@@ -250,9 +250,9 @@ export default function Index() {
         <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:40px_40px]" />
         <div className="container mx-auto px-4 py-16 md:py-24 relative grid md:grid-cols-2 gap-10 items-center">
           <div className="text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-3 bg-gradient-to-r from-[#FF9900] to-[#0078D4] bg-clip-text text-transparent">Kiruthiga Thirunavukkarasu</h1>
-            <p className="text-lg md:text-xl font-semibold text-slate-700 dark:text-slate-200 h-7">{typed}<span className="animate-pulse">|</span></p>
-            <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 mt-4 max-w-xl">
+            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-[#FF9900] to-[#0078D4] bg-clip-text text-transparent">Kiruthiga Thirunavukkarasu</h1>
+            <p className="text-lg md:text-xl font-semibold text-slate-700 dark:text-slate-200 h-7 mb-6">{typed}<span className="animate-pulse">|</span></p>
+            <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 max-w-xl">
               Cloud Networking Engineer with 10+ years of experience designing and optimizing telecommunications core networks at Nokia and Reliance Communications. AWS Certified Solutions Architect currently expanding expertise in Microsoft Azure, Python, Docker, GitHub, and Cloud Automation. Passionate about building secure, scalable, and resilient cloud infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 mt-8 justify-center md:justify-start">
@@ -334,10 +334,10 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Projects */}
+      {/* Home Lab Setup */}
       <section id="projects" className="py-14 bg-slate-50 dark:bg-slate-900/50">
         <div className="container mx-auto px-4">
-          <Reveal><h2 className="text-3xl font-bold text-center mb-10">Featured Projects</h2></Reveal>
+          <Reveal><h2 className="text-3xl font-bold text-center mb-10">Home Lab Setup</h2></Reveal>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((p) => (
               <Reveal key={p.title}>

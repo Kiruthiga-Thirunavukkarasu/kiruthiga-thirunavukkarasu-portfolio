@@ -158,26 +158,33 @@ export default function Index() {
       <section id="top" className="relative overflow-hidden bg-slate-900 text-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,theme(colors.slate.700),transparent_55%)]" />
         <div className="container mx-auto px-4 py-14 md:py-20 relative">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block px-4 py-1 rounded-full bg-slate-700 text-slate-200 text-sm font-semibold mb-4 border border-slate-600">
-              AWS Solutions Architect · Open to Work
-            </span>
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
-              Kiruthiga Thirunavukkarasu
-            </h1>
-            <p className="text-lg md:text-xl text-slate-300 mb-2 font-medium">Cloud Networking · VoIP & Telecom Specialist</p>
-            <p className="text-base md:text-lg text-slate-400 mb-8 max-w-2xl mx-auto">
-              Network & Telekommunikationsexpertin with 10+ years planning core infrastructures (3G–5G)
-              at Nokia & Reliance — now combining telecom rigor with AWS Solutions Architect expertise and active Azure training at DCI.
-              Currently seeking a cloud networking role in Germany or remote.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-md bg-white text-slate-900 px-6 py-3 font-semibold hover:bg-slate-200 transition-colors">
-                Get in Touch <ArrowRight className="w-4 h-4" />
-              </a>
-              <a href="#learning" className="inline-flex items-center justify-center gap-2 rounded-md border border-slate-500 px-6 py-3 font-semibold hover:bg-slate-800 transition-colors">
-                My Learning Path
-              </a>
+          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
+            <img
+              src="/media/IMG_7587-transformed.jpeg"
+              alt="Kiruthiga Thirunavukkarasu"
+              className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-slate-600 shadow-lg shrink-0"
+            />
+            <div className="max-w-2xl">
+              <span className="inline-block px-4 py-1 rounded-full bg-slate-700 text-slate-200 text-sm font-semibold mb-4 border border-slate-600">
+                AWS Solutions Architect · Open to Work
+              </span>
+              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
+                Kiruthiga Thirunavukkarasu
+              </h1>
+              <p className="text-lg md:text-xl text-slate-300 mb-2 font-medium">Cloud Networking · VoIP & Telecom Specialist</p>
+              <p className="text-base md:text-lg text-slate-400 mb-8">
+                Network & Telekommunikationsexpertin with 10+ years planning core infrastructures (3G–5G)
+                at Nokia & Reliance — now combining telecom rigor with AWS Solutions Architect expertise and active Azure training at DCI.
+                Currently seeking a cloud networking role in Germany or remote.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+                <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-md bg-white text-slate-900 px-6 py-3 font-semibold hover:bg-slate-200 transition-colors">
+                  Get in Touch <ArrowRight className="w-4 h-4" />
+                </a>
+                <a href="#learning" className="inline-flex items-center justify-center gap-2 rounded-md border border-slate-500 px-6 py-3 font-semibold hover:bg-slate-800 transition-colors">
+                  My Learning Path
+                </a>
+              </div>
             </div>
           </div>
         </div>

@@ -166,7 +166,7 @@ export default function Index() {
             />
             <div className="max-w-2xl">
               <span className="inline-block px-4 py-1 rounded-full bg-slate-700 text-slate-200 text-sm font-semibold mb-4 border border-slate-600">
-                AWS Solutions Architect · Open to Work
+                Cloud Networking Engineer · Open to Work
               </span>
               <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
                 Kiruthiga Thirunavukkarasu
@@ -214,7 +214,7 @@ export default function Index() {
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <span className="px-3 py-1 rounded bg-slate-100 text-slate-700 text-sm font-medium">Open to Work</span>
-                <span className="px-3 py-1 rounded bg-slate-800 text-white text-sm font-medium">AWS Solutions Architect</span>
+                <span className="px-3 py-1 rounded bg-slate-800 text-white text-sm font-medium">Cloud Networking Engineer</span>
                 <span className="px-3 py-1 rounded bg-slate-100 text-slate-700 text-sm font-medium">Azure Trainee</span>
               </div>
             </div>

@@ -25,7 +25,7 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a
-                href="/media/IMG_7587-transformed.jpeg"
+                href="/Downloads/1.jpeg"
                 download
                 className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 px-6 py-3 font-semibold text-white hover:opacity-90 transition-opacity shadow-lg"
               >

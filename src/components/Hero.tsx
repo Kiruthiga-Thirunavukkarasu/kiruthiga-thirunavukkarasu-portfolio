@@ -1,9 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Download, Mail } from "lucide-react";
+import { Download, Mail, User } from "lucide-react";
+import { useState } from "react";
 
 const Hero = () => {
+  const [imgError, setImgError] = useState(false);
+
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-slate-950">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.15),transparent_50%)]" />
@@ -47,11 +50,18 @@ const Hero = () => {
           >
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-3xl blur-2xl opacity-30" />
-              <img
-                src="/media/IMG_7587-transformed.jpeg"
-                alt="Kiruthiga Thirunavukkarasu"
-                className="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl object-cover border border-slate-700 shadow-2xl"
-              />
+              {imgError ? (
+                <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl border border-slate-700 shadow-2xl bg-slate-800 flex items-center justify-center">
+                  <User className="w-20 h-20 text-slate-500" />
+                </div>
+              ) : (
+                <img
+                  src="/media/IMG_7587-transformed.jpeg"
+                  alt="Kiruthiga Thirunavukkarasu"
+                  onError={() => setImgError(true)}
+                  className="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl object-cover border border-slate-700 shadow-2xl"
+                />
+              )}
             </div>
           </motion.div>
         </div>

@@ -48,7 +48,7 @@ const industries = ["Telecommunications", "Nokia", "Reliance India"];
 
 const whyUs = [
   { title: "10+ Years Experience", desc: "A decade of hands-on telecom core network planning at Nokia and Reliance." },
-  { title: "AWS Certified", desc: "AWS Solutions Architect Associate certified, applying cloud best practices." },
+  { title: "AWS Solutions Architect", desc: "AWS Certified Solutions Architect Associate, applying cloud best practices." },
   { title: "Dual Domain Skills", desc: "Rare combination of deep telecom knowledge and modern cloud abilities." },
   { title: "Quick Learner", desc: "Actively training in Azure, Python and Docker alongside my telco background." },
   { title: "International Background", desc: "Worked in India and Germany with strong cross-cultural adaptability." },
@@ -160,7 +160,7 @@ export default function Index() {
         <div className="container mx-auto px-4 py-14 md:py-20 relative">
           <div className="max-w-3xl mx-auto text-center">
             <span className="inline-block px-4 py-1 rounded-full bg-slate-700 text-slate-200 text-sm font-semibold mb-4 border border-slate-600">
-              AWS Network Engineer · Open to Work
+              AWS Solutions Architect · Open to Work
             </span>
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
               Kiruthiga Thirunavukkarasu
@@ -168,7 +168,7 @@ export default function Index() {
             <p className="text-lg md:text-xl text-slate-300 mb-2 font-medium">Cloud Networking · VoIP & Telecom Specialist</p>
             <p className="text-base md:text-lg text-slate-400 mb-8 max-w-2xl mx-auto">
               Network & Telekommunikationsexpertin with 10+ years planning core infrastructures (3G–5G)
-              at Nokia & Reliance — now combining telecom rigor with AWS cloud architecture and active Azure training at DCI.
+              at Nokia & Reliance — now combining telecom rigor with AWS Solutions Architect expertise and active Azure training at DCI.
               Currently seeking a cloud networking role in Germany or remote.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -198,7 +198,7 @@ export default function Index() {
                 I'm a cloud networking professional with over 10 years of experience in telecommunications
                 and core network planning at global leaders like Nokia and Reliance. After a successful
                 integration phase in Germany (Deutsch C1 certified), I'm now expanding into modern cloud
-                platforms — AWS certified and currently training in Microsoft Azure at DCI.
+                platforms — AWS Certified Solutions Architect and currently training in Microsoft Azure at DCI.
               </p>
               <p className="text-slate-600 leading-relaxed">
                 I'm actively looking for a role where I can combine my deep telecom background with
@@ -207,7 +207,7 @@ export default function Index() {
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <span className="px-3 py-1 rounded bg-slate-100 text-slate-700 text-sm font-medium">Open to Work</span>
-                <span className="px-3 py-1 rounded bg-slate-800 text-white text-sm font-medium">AWS Certified</span>
+                <span className="px-3 py-1 rounded bg-slate-800 text-white text-sm font-medium">AWS Solutions Architect</span>
                 <span className="px-3 py-1 rounded bg-slate-100 text-slate-700 text-sm font-medium">Azure Trainee</span>
               </div>
             </div>

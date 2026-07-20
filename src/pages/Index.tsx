@@ -8,10 +8,13 @@ import Projects from "@/components/Projects";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function Index() {
   return (
     <div className="bg-slate-950 text-slate-100 min-h-screen">
+      <Seo />
       <Navbar />
       <main>
         <Hero />
@@ -22,6 +25,7 @@ export default function Index() {
         <Contact />
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

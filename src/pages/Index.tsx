@@ -427,20 +427,12 @@ export default function Index() {
         <div className="container mx-auto px-4 max-w-3xl">
           <Reveal>
             <h2 className="text-3xl font-bold text-center mb-8">Let's Connect</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-3 text-sm">
-                <p className="flex items-center gap-2"><Mail className="w-4 h-4 text-[#FF9900]" /> kithucherry@gmail.com</p>
-                <p className="flex items-center gap-2"><Phone className="w-4 h-4 text-[#FF9900]" /> +49 17665062731</p>
-                <p className="flex items-center gap-2"><MapPin className="w-4 h-4 text-[#FF9900]" /> Bonn, Germany</p>
-                <p className="flex items-center gap-2"><Linkedin className="w-4 h-4 text-[#0078D4]" /> <a href="https://www.linkedin.com/in/kiruthiga-thirunavukkarasu-43389014/" target="_blank" rel="noreferrer" className="hover:underline">LinkedIn</a></p>
-                <p className="flex items-center gap-2"><Github className="w-4 h-4 text-[#0078D4]" /> <a href="https://github.com/Kiruthiga-Thirunavukkarasu" target="_blank" rel="noreferrer" className="hover:underline">GitHub</a></p>
-              </div>
-              <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
-                <input type="text" placeholder="Name" className="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0078D4]" />
-                <input type="email" placeholder="Email" className="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0078D4]" />
-                <textarea placeholder="Message" rows={3} className="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0078D4]" />
-                <button type="submit" className="w-full rounded-xl bg-[#FF9900] text-white font-semibold py-2 hover:opacity-90 transition">Send Message</button>
-              </form>
+            <div className="space-y-3 text-sm max-w-md mx-auto">
+              <p className="flex items-center gap-2"><Mail className="w-4 h-4 text-[#FF9900]" /> kithucherry@gmail.com</p>
+              <p className="flex items-center gap-2"><Phone className="w-4 h-4 text-[#FF9900]" /> +49 17665062731</p>
+              <p className="flex items-center gap-2"><MapPin className="w-4 h-4 text-[#FF9900]" /> Bonn, Germany</p>
+              <p className="flex items-center gap-2"><Linkedin className="w-4 h-4 text-[#0078D4]" /> <a href="https://www.linkedin.com/in/kiruthiga-thirunavukkarasu-43389014/" target="_blank" rel="noreferrer" className="hover:underline">LinkedIn</a></p>
+              <p className="flex items-center gap-2"><Github className="w-4 h-4 text-[#0078D4]" /> <a href="https://github.com/Kiruthiga-Thirunavukkarasu" target="_blank" rel="noreferrer" className="hover:underline">GitHub</a></p>
             </div>
           </Reveal>
         </div>

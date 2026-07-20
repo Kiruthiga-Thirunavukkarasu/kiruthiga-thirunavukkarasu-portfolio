@@ -196,7 +196,7 @@ export default function Index() {
                   <s.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="font-bold text-lg mb-3 text-slate-800">{s.title}</h3>
-                <ul className="space-y-1 text-sm text-slate-600">
+                <ul className="space-y-0.5 text-sm text-slate-600">
                   {s.items.map((i) => (
                     <li key={i} className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" /> {i}
@@ -284,8 +284,8 @@ export default function Index() {
                 <div key={e.role} className="border-l-2 border-indigo-200 pl-5">
                   <p className="text-xs font-semibold text-indigo-600">{e.period}</p>
                   <h4 className="font-bold text-slate-800">{e.role}</h4>
-                  <p className="text-sm text-slate-500 mb-2">{e.company} · {e.loc}</p>
-                  <ul className="text-sm text-slate-600 space-y-0.5">
+                  <p className="text-sm text-slate-500">{e.company} · {e.loc}</p>
+                  <ul className="text-sm text-slate-600 space-y-0.5 mt-1">
                     {e.points.map((p) => <li key={p}>– {p}</li>)}
                   </ul>
                 </div>
@@ -293,8 +293,8 @@ export default function Index() {
               <div className="border-l-2 border-amber-200 pl-5">
                 <p className="text-xs font-semibold text-amber-600">2026 – laufend</p>
                 <h4 className="font-bold text-slate-800">Cloud Student (Azure)</h4>
-                <p className="text-sm text-slate-500 mb-2">DCI Digital Career Institute · Bonn</p>
-                <ul className="text-sm text-slate-600 space-y-0.5">
+                <p className="text-sm text-slate-500">DCI Digital Career Institute · Bonn</p>
+                <ul className="text-sm text-slate-600 space-y-0.5 mt-1">
                   <li>– Python, GitHub, HTML, Docker Grundlagen</li>
                   <li>– Microsoft Azure Fundamentals & Cloud Practice</li>
                 </ul>

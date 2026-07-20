@@ -98,15 +98,15 @@ export default function Index() {
         <div className="container mx-auto px-4 py-20 md:py-28 relative">
           <div className="max-w-3xl mx-auto text-center animate-[fadeIn_0.8s_ease-out]">
             <span className="inline-block px-4 py-1 rounded-full bg-indigo-100 text-indigo-700 text-sm font-semibold mb-4">
-              Consulting Partner
+              AWS Network Engineer
             </span>
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-4">
-              Cloud Solutions for <span className="text-indigo-600">Every Business</span>
+              Kiruthiga Thirunavukkarasu
             </h1>
-            <p className="text-lg md:text-xl text-slate-600 mb-2 font-medium">Secure • Scalable • Reliable</p>
+            <p className="text-lg md:text-xl text-slate-600 mb-2 font-medium">Cloud Networking · VoIP & Telecom Specialist</p>
             <p className="text-base md:text-lg text-slate-500 mb-8 max-w-2xl mx-auto">
-              Founded by Kiruthiga Thirunavukkarasu — Cloud Network Consultant with 10+ years in telecom,
-              networking & AWS cloud architecture.
+              Network & Telekommunikationsexpertin with 10+ years planning core infrastructures (3G–5G)
+              at Nokia & Reliance — now combining telecom rigor with AWS cloud architecture.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 font-semibold transition-colors">

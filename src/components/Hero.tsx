@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Download, Mail, User } from "lucide-react";
 import { useState } from "react";
+import profileImage from "/media/IMG_7587-transformed.jpeg";
 
 const Hero = () => {
   const [imgError, setImgError] = useState(false);
@@ -28,7 +29,7 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a
-                href="/media/IMG_7587-transformed.jpeg"
+                href={profileImage}
                 download
                 className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 px-6 py-3 font-semibold text-white hover:opacity-90 transition-opacity shadow-lg"
               >
@@ -56,7 +57,7 @@ const Hero = () => {
                 </div>
               ) : (
                 <img
-                  src="/img/IMG_7587-transformed.jpeg"
+                  src={profileImage}
                   alt="Kiruthiga Thirunavukkarasu"
                   onError={() => setImgError(true)}
                   className="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl object-cover border border-slate-700 shadow-2xl"

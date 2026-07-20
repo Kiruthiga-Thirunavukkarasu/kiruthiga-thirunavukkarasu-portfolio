@@ -8,6 +8,7 @@ import {
   ArrowUp, Sun, Moon,
 } from "lucide-react";
 import { MadeWithDyad } from "@/components/made-with-dyad";
+import CursorTrail from "@/components/CursorTrail";
 
 /* ---------- Data ---------- */
 const navLinks = [
@@ -200,6 +201,8 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors font-sans">
+      <CursorTrail />
+
       {/* SEO / Schema */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "Person",

@@ -59,6 +59,7 @@ const experience = [
   { period: "2005 – 2007", role: "Core Planning Engineer", company: "Reliance Communications", loc: "Pan-Indien", points: ["Analyse & Modellierung von Core-Netzwerken", "Optimierung 2G/3G Kapazitätsplanung", "3GPP-Standardkonformität"] },
   { period: "2007 – 2016", role: "Core Planning Engineer", company: "Nokia Solutions Networks", loc: "Pan-Indien", points: ["Planung & Optimierung großskaliger Kernnetzarchitekturen (2G–4G, IMS)", "Konfiguration & Troubleshooting von Cisco-Routern/Switches", "Netzwerksicherheitskonzepte & Latenzanalyse"] },
   { period: "2016 – 2023", role: "Homemaker & German Language Learning", company: "Familie & Weiterbildung", loc: "Bonn", points: ["Umzug nach Deutschland 2016", "Deutsch Lernphase A1 bis C1 absolviert", "Deutsch C1 zertifiziert", "AWS SAA-C03 (Solutions Architect Associate) erreicht"] },
+  { period: "2024 – heute", role: "Case Handling Engineer", company: "Nokia Solutions Networks", loc: "Bonn", points: ["Planung & Optimierung großskaliger Kernnetzarchitekturen (2G–4G, IMS)", "Konfiguration & Troubleshooting von Cisco-Routern/Switches", "Netzwerksicherheitskonzepte & Latenzanalyse"] },
 ];
 
 const certs = [

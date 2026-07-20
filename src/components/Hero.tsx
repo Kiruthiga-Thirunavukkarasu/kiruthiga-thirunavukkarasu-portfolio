@@ -56,7 +56,7 @@ const Hero = () => {
                 </div>
               ) : (
                 <img
-                  src="/media/IMG_7587-transformed.jpeg"
+                  src="/img/IMG_7587-transformed.jpeg"
                   alt="Kiruthiga Thirunavukkarasu"
                   onError={() => setImgError(true)}
                   className="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl object-cover border border-slate-700 shadow-2xl"

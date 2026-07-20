@@ -166,10 +166,12 @@ function HeroCloudArt() {
   );
 }
 
-function Btn3D({ href, children, className = "" }: { href: string; children: React.ReactNode; className?: string }) {
+function Btn3D({ href, children, className = "", download = false }: { href: string; children: React.ReactNode; className?: string; download?: boolean }) {
   return (
     <a
       href={href}
+      download={download ? "Kiruthiga-Thirunavukkarasu-Resume.pdf" : undefined}
+      target={download ? undefined : "_self"}
       className={`inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 font-semibold transition-all duration-200 shadow-[0_6px_0_0_rgba(0,0,0,0.15)] hover:shadow-[0_3px_0_0_rgba(0,0,0,0.15)] hover:translate-y-[3px] active:shadow-none active:translate-y-[6px] ${className}`}
     >
       {children}
@@ -271,7 +273,7 @@ export default function Index() {
               Cloud Networking Engineer with 10+ years of experience designing and optimizing telecommunications core networks at Nokia and Reliance Communications. AWS Certified Solutions Architect currently expanding expertise in Microsoft Azure, Python, Docker, GitHub, and Cloud Automation. Passionate about building secure, scalable, and resilient cloud infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 mt-8 justify-center md:justify-start">
-              <Btn3D href="#" className="bg-[#FF9900] text-white"> <Download className="w-4 h-4" /> Download Resume</Btn3D>
+              <Btn3D href="/resume.pdf" download className="bg-[#FF9900] text-white"> <Download className="w-4 h-4" /> Download Resume</Btn3D>
               <Btn3D href="#projects" className="bg-[#0078D4] text-white"> <Rocket className="w-4 h-4" /> View Projects</Btn3D>
               <Btn3D href="#contact" className="border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">Contact Me</Btn3D>
             </div>
@@ -467,7 +469,7 @@ export default function Index() {
           <p className="text-slate-500">© {new Date().getFullYear()} Kiruthiga Thirunavukkarasu. Made with ❤️</p>
           <div className="flex gap-4">
             {navLinks.slice(0, 4).map((l) => <a key={l.href} href={l.href} className="hover:text-[#0078D4]">{l.label}</a>)}
-            <a href="#" className="hover:text-[#FF9900]">Resume</a>
+            <a href="/resume.pdf" download="Kiruthiga-Thirunavukkarasu-Resume.pdf" className="hover:text-[#FF9900]">Resume</a>
           </div>
           <div className="flex gap-3">
             <a href="https://www.linkedin.com/in/kiruthiga-thirunavukkarasu-43389014/" target="_blank" rel="noreferrer"><Linkedin className="w-5 h-5 hover:text-[#0078D4]" /></a>

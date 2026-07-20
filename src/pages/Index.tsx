@@ -1,19 +1,281 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+"use client";
 
+import { useState } from "react";
+import { Mail, MapPin, Linkedin, Github, Cloud, Shield, Network, Phone, ArrowRight, CheckCircle2, Menu, X } from "lucide-react";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 
-const Index = () => {
+const navLinks = [
+  { href: "#about", label: "About" },
+  { href: "#services", label: "Services" },
+  { href: "#why", label: "Why Us" },
+  { href: "#industries", label: "Industries" },
+  { href: "#contact", label: "Contact" },
+];
+
+const services = [
+  {
+    icon: Cloud,
+    title: "Cloud Consulting",
+    items: ["AWS Architecture Design", "Seamless Cloud Migration", "Cost Optimization & Analytics", "Disaster Recovery Planning"],
+    color: "from-sky-500 to-indigo-500",
+  },
+  {
+    icon: Network,
+    title: "Networking",
+    items: ["Cisco Routing & Switching", "Secure VPN Solutions", "VLAN Configuration & Setup", "Advanced Network Design", "Diagnostics & Troubleshooting"],
+    color: "from-emerald-500 to-teal-500",
+  },
+  {
+    icon: Shield,
+    title: "Cyber Security & Telecom",
+    items: ["IAM & Security Groups", "Zero-Trust Segmentation", "SIP Trunking & Engineering", "IMS Integration", "Managed VoIP Solutions", "Core Network Consulting"],
+    color: "from-rose-500 to-pink-500",
+  },
+];
+
+const industries = ["Healthcare", "Logistics", "Retail", "Education", "Small & Medium Businesses", "Manufacturing", "Startups"];
+
+const whyUs = [
+  { title: "10+ Years Experience", desc: "Deep roots in complex enterprise networking and critical telco infrastructure." },
+  { title: "AWS Certified", desc: "Rigorously trained Solutions Architect expertise driving best-practice deployments." },
+  { title: "Dual Domain Expertise", desc: "Rare blend of telecom core and agile public cloud skillsets." },
+  { title: "Cost-Effective", desc: "Tailored, pragmatic designs that maximize performance per dollar spent." },
+  { title: "International Outlook", desc: "Diverse background with a broad understanding of tech standards." },
+  { title: "Personal Support", desc: "Dedicated consultant attention without corporate bureaucracy." },
+];
+
+const experience = [
+  { period: "01/2024 – heute", role: "Case Handling Engineer", company: "Nokia Solutions Networks", loc: "Bonn", points: ["Planung & Optimierung großskaliger Kernnetzarchitekturen (2G–4G, IMS)", "Konfiguration & Troubleshooting von Cisco-Routern/Switches", "Netzwerksicherheitskonzepte & Latenzanalyse"] },
+  { period: "06/2016 – 12/2023", role: "Homemaker & Integration", company: "Familie & Weiterbildung", loc: "Bonn", points: ["Umzug nach Deutschland 2016", "Deutsch C1 zertifiziert", "AWS / Azure Weiterbildung bei DCI"] },
+  { period: "10/2007 – 06/2016", role: "Core Planning Engineer", company: "Reliance Communications", loc: "Pan-Indien", points: ["Analyse & Modellierung von Core-Netzwerken", "Optimierung 2G/3G Kapazitätsplanung", "3GPP-Standardkonformität"] },
+];
+
+const certs = [
+  "AWS Certified Solutions Architect – Associate (SAA-C03)",
+  "Oracle Cloud Infrastructure AI Associate",
+  "Deutsch C1 Zertifiziert",
+  "Agile Scrum Master (PSM I)",
+  "CCNA / Cisco Router Vorbereitung",
+];
+
+export default function Index() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">
-          Start building your amazing project here!
-        </p>
-      </div>
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-800 font-sans">
+      {/* Header */}
+      <header className="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-slate-200">
+        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+          <a href="#top" className="flex items-center gap-2 font-bold text-lg text-indigo-700">
+            <Cloud className="w-6 h-6" />
+            Cloud4All<span className="text-slate-400">Solutions</span>
+          </a>
+          <nav className="hidden md:flex gap-6 text-sm font-medium">
+            {navLinks.map((l) => (
+              <a key={l.href} href={l.href} className="hover:text-indigo-600 transition-colors">
+                {l.label}
+              </a>
+            ))}
+          </nav>
+          <button className="md:hidden" onClick={() => setOpen(!open)} aria-label="Menu">
+            {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+        {open && (
+          <nav className="md:hidden bg-white border-t border-slate-100 py-2 px-4 flex flex-col gap-2 text-sm">
+            {navLinks.map((l) => (
+              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="py-1 hover:text-indigo-600">
+                {l.label}
+              </a>
+            ))}
+          </nav>
+        )}
+      </header>
+
+      {/* Hero */}
+      <section id="top" className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,theme(colors.indigo.100),transparent_50%)]" />
+        <div className="container mx-auto px-4 py-20 md:py-28 relative">
+          <div className="max-w-3xl mx-auto text-center animate-[fadeIn_0.8s_ease-out]">
+            <span className="inline-block px-4 py-1 rounded-full bg-indigo-100 text-indigo-700 text-sm font-semibold mb-4">
+              Consulting Partner
+            </span>
+            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-4">
+              Cloud Solutions for <span className="text-indigo-600">Every Business</span>
+            </h1>
+            <p className="text-lg md:text-xl text-slate-600 mb-2 font-medium">Secure • Scalable • Reliable</p>
+            <p className="text-base md:text-lg text-slate-500 mb-8 max-w-2xl mx-auto">
+              Founded by Kiruthiga Thirunavukkarasu — Cloud Network Consultant with 10+ years in telecom,
+              networking & AWS cloud architecture.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 font-semibold transition-colors">
+                Get in Touch <ArrowRight className="w-4 h-4" />
+              </a>
+              <a href="#services" className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-slate-200 hover:border-indigo-300 px-6 py-3 font-semibold transition-colors">
+                Explore Services
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">About Cloud4All Solutions</h2>
+              <p className="text-slate-600 mb-4 leading-relaxed">
+                We help organizations modernize IT infrastructure through secure cloud architecture,
+                enterprise networking, and digital transformation. Our mission: make cloud adoption simple,
+                secure, and affordable for businesses of all sizes.
+              </p>
+              <p className="text-slate-600 leading-relaxed">
+                We bridge traditional telecommunications, complex hardware routing, and modern
+                software-defined cloud infrastructure to deliver end-to-end resilience.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <span className="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm font-medium">Enterprise Grade</span>
+                <span className="px-3 py-1 rounded-full bg-rose-50 text-rose-700 text-sm font-medium">Security First</span>
+                <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-sm font-medium">Cost Optimized</span>
+              </div>
+            </div>
+            <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100">
+              <h3 className="font-bold text-lg mb-4 text-slate-800">Founder Profile</h3>
+              <div className="space-y-3 text-sm">
+                <p className="flex items-center gap-2"><Mail className="w-4 h-4 text-indigo-500" /> kithucherry@gmail.com</p>
+                <p className="flex items-center gap-2"><Phone className="w-4 h-4 text-indigo-500" /> +49 176 650 627 31</p>
+                <p className="flex items-center gap-2"><MapPin className="w-4 h-4 text-indigo-500" /> Michaelplatz-1, 53177 Bonn, Deutschland</p>
+                <p className="flex items-center gap-2">
+                  <Linkedin className="w-4 h-4 text-indigo-500" />
+                  <a href="https://www.linkedin.com/in/kiruthiga-thirunavukkarasu-43389014/" target="_blank" rel="noreferrer" className="hover:underline">LinkedIn Profile</a>
+                </p>
+                <p className="flex items-center gap-2">
+                  <Github className="w-4 h-4 text-indigo-500" />
+                  <a href="https://github.com/Kiruthiga-Thirunavukkarasu" target="_blank" rel="noreferrer" className="hover:underline">GitHub Repository</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section id="services" className="py-16 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">Our Services</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {services.map((s) => (
+              <div key={s.title} className="bg-white rounded-3xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${s.color} flex items-center justify-center mb-4`}>
+                  <s.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-bold text-lg mb-3 text-slate-800">{s.title}</h3>
+                <ul className="space-y-2 text-sm text-slate-600">
+                  {s.items.map((i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" /> {i}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Us */}
+      <section id="why" className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">Why Partner With Us</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {whyUs.map((w) => (
+              <div key={w.title} className="flex gap-3 p-5 rounded-2xl bg-slate-50 border border-slate-100">
+                <CheckCircle2 className="w-5 h-5 text-indigo-500 shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="font-semibold text-slate-800">{w.title}</h4>
+                  <p className="text-sm text-slate-600">{w.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Experience & Certs */}
+      <section className="py-16 bg-slate-50">
+        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-10">
+          <div>
+            <h2 className="text-3xl font-bold text-slate-900 mb-8">Experience</h2>
+            <div className="space-y-6">
+              {experience.map((e) => (
+                <div key={e.role} className="border-l-2 border-indigo-200 pl-5">
+                  <p className="text-xs font-semibold text-indigo-600">{e.period}</p>
+                  <h4 className="font-bold text-slate-800">{e.role}</h4>
+                  <p className="text-sm text-slate-500 mb-2">{e.company} · {e.loc}</p>
+                  <ul className="text-sm text-slate-600 space-y-1">
+                    {e.points.map((p) => <li key={p}>– {p}</li>)}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h2 className="text-3xl font-bold text-slate-900 mb-8">Certifications</h2>
+            <div className="space-y-3">
+              {certs.map((c) => (
+                <div key={c} className="flex items-center gap-3 bg-white rounded-xl p-4 border border-slate-100 shadow-sm">
+                  <Shield className="w-5 h-5 text-emerald-500 shrink-0" />
+                  <span className="text-sm font-medium text-slate-700">{c}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 bg-indigo-600 rounded-3xl p-6 text-white">
+              <h3 className="font-bold text-lg mb-2">Education</h3>
+              <p className="text-sm opacity-90">Electronics & Communication Engineering — Anna University Chennai (2001–2005)</p>
+              <p className="text-sm opacity-90 mt-1">Core Planning & Telecom Engineering — Mumbai, India (2005–2007)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Industries */}
+      <section id="industries" className="py-16 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-slate-900 mb-10">Industries We Support</h2>
+          <div className="flex flex-wrap justify-center gap-3">
+            {industries.map((i) => (
+              <span key={i} className="px-5 py-2 rounded-full bg-slate-100 text-slate-700 font-medium hover:bg-indigo-100 hover:text-indigo-700 transition-colors">
+                {i}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="py-16 bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-4">Let's Build Your Cloud Future</h2>
+          <p className="mb-8 opacity-90 max-w-xl mx-auto">
+            Secure, scalable and reliable cloud solutions tailored to your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="mailto:kithucherry@gmail.com" className="inline-flex items-center gap-2 bg-white text-indigo-700 rounded-full px-6 py-3 font-semibold hover:bg-slate-100 transition-colors">
+              <Mail className="w-4 h-4" /> kithucherry@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/kiruthiga-thirunavukkarasu-43389014/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border-2 border-white/40 rounded-full px-6 py-3 font-semibold hover:bg-white/10 transition-colors">
+              <Linkedin className="w-4 h-4" /> LinkedIn
+            </a>
+          </div>
+          <p className="mt-6 text-sm opacity-80 flex items-center justify-center gap-1">
+            <MapPin className="w-4 h-4" /> Bonn, Germany
+          </p>
+        </div>
+      </section>
+
       <MadeWithDyad />
     </div>
   );
-};
-
-export default Index;
+}

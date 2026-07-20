@@ -189,7 +189,7 @@ export default function Index() {
           <Reveal className="grid md:grid-cols-2 gap-10 items-center">
             <div className="flex flex-col items-center md:items-start">
               <img
-                src="/media/profile-photo.jpeg"
+                src="/media/IMG_7587-transformed.jpeg"
                 alt="Kiruthiga Thirunavukkarasu"
                 className="w-48 h-48 rounded-lg object-cover border-2 border-slate-200 shadow-sm mb-4"
               />

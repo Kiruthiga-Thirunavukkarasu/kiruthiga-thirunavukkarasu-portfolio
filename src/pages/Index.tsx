@@ -34,7 +34,7 @@ const services = [
   },
 ];
 
-const industries = ["Healthcare", "Logistics", "Retail", "Education", "Small & Medium Businesses", "Manufacturing", "Startups"];
+const industries = ["Telecommunications", "Nokia", "Reliance India"];
 
 const whyUs = [
   { title: "10+ Years Experience", desc: "Deep roots in complex enterprise networking and critical telco infrastructure." },
@@ -323,7 +323,7 @@ export default function Index() {
       {/* Industries */}
       <section id="industries" className="py-10 bg-slate-50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Sectors I've Worked In</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">Where I've Worked</h2>
           <div className="flex flex-wrap justify-center gap-3">
             {industries.map((i) => (
               <span key={i} className="px-5 py-2 rounded-full bg-white text-slate-700 font-medium hover:bg-indigo-100 hover:text-indigo-700 transition-colors border border-slate-100">

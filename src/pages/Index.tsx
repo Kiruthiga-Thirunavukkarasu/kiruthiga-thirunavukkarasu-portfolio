@@ -195,11 +195,6 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <Reveal className="grid md:grid-cols-2 gap-10 items-center">
             <div className="flex flex-col items-center md:items-start">
-              <img
-                src="/media/IMG_7587-transformed.jpeg"
-                alt="Kiruthiga Thirunavukkarasu"
-                className="w-48 h-48 rounded-lg object-cover border-2 border-slate-200 shadow-sm mb-4"
-              />
               <h2 className="text-3xl font-bold text-slate-900 mb-4">About Me</h2>
               <p className="text-slate-600 mb-3 leading-relaxed">
                 I'm a cloud networking professional with over 10 years of experience in telecommunications

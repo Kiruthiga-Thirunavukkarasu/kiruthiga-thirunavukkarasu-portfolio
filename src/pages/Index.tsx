@@ -10,6 +10,7 @@ import {
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import CursorTrail from "@/components/CursorTrail";
 import ThreeDCard from "@/components/ThreeDCard";
+import AwsVpcDiagram from "@/components/AwsVpcDiagram";
 
 /* ---------- Data ---------- */
 const navLinks = [
@@ -50,12 +51,43 @@ const experience = [
 ];
 
 const projects = [
-  { title: "AWS Three Tier Architecture", desc: "Highly available web architecture using EC2, ALB, Auto Scaling, RDS, S3, IAM, Route53.", tags: ["AWS", "EC2", "RDS", "IAM", "VPC", "Terraform"], img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" },
-  { title: "Azure Virtual Network Lab", desc: "Secure Azure networking lab with VNet, NSG, VPN Gateway and peering.", tags: ["Azure VNet", "NSG", "VPN Gateway", "Azure VM", "Virtual Network Peering"], img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" },
-  { title: "Python Network Automation", desc: "Automated Cisco device configuration using Python and Netmiko over SSH.", tags: ["Python", "Netmiko", "SSH", "Automation", "Cisco"], img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" },
-  { title: "Dockerized Web Application", desc: "Containerized NGINX web app with reproducible Docker workflows.", tags: ["Docker", "NGINX", "Containers"], img: "https://images.unsplash.com/photo-1605745341112-85968b19335b?auto=format&fit=crop&w=800&q=80" },
-  { title: "Hybrid Cloud Network", desc: "Connected AWS and Azure via VPN with custom routing and cloud migration.", tags: ["AWS", "Azure", "VPN", "Routing", "Cloud Migration"], img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" },
-  { title: "Secure Cloud Infrastructure", desc: "Zero-trust cloud infra with IAM, security groups, and CloudWatch monitoring.", tags: ["IAM", "Security Groups", "Zero Trust", "Monitoring", "CloudWatch"], img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" },
+  { 
+    title: "AWS Three Tier Architecture", 
+    desc: "Highly available web architecture using EC2, ALB, Auto Scaling, RDS, S3, IAM, Route53.", 
+    tags: ["AWS", "EC2", "RDS", "IAM", "VPC", "Terraform"], 
+    img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    interactive: true
+  },
+  { 
+    title: "Azure Virtual Network Lab", 
+    desc: "Secure Azure networking lab with VNet, NSG, VPN Gateway and peering.", 
+    tags: ["Azure VNet", "NSG", "VPN Gateway", "Azure VM", "Virtual Network Peering"], 
+    img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" 
+  },
+  { 
+    title: "Python Network Automation", 
+    desc: "Automated Cisco device configuration using Python and Netmiko over SSH.", 
+    tags: ["Python", "Netmiko", "SSH", "Automation", "Cisco"], 
+    img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" 
+  },
+  { 
+    title: "Dockerized Web Application", 
+    desc: "Containerized NGINX web app with reproducible Docker workflows.", 
+    tags: ["Docker", "NGINX", "Containers"], 
+    img: "https://images.unsplash.com/photo-1605745341112-85968b19335b?auto=format&fit=crop&w=800&q=80" 
+  },
+  { 
+    title: "Hybrid Cloud Network", 
+    desc: "Connected AWS and Azure via VPN with custom routing and cloud migration.", 
+    tags: ["AWS", "Azure", "VPN", "Routing", "Cloud Migration"], 
+    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" 
+  },
+  { 
+    title: "Secure Cloud Infrastructure", 
+    desc: "Zero-trust cloud infra with IAM, security groups, and CloudWatch monitoring.", 
+    tags: ["IAM", "Security Groups", "Zero Trust", "Monitoring", "CloudWatch"], 
+    img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" 
+  },
 ];
 
 const certs = [
@@ -236,7 +268,7 @@ export default function Index() {
       <header className="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-slate-950/80 border-b border-slate-200 dark:border-slate-800">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-2 font-bold text-lg">
-            <Cloud className="w-6 h-6 text-[#FF9900]" /> Kiruthiga<span className="text-[#0078D4]">.dev</span>
+            <Cloud className="w-6 h-6 text-[#FF9900]" /> Kiruthiga Thirunavukkarasu
           </a>
           <nav className="hidden lg:flex gap-5 text-sm font-medium">
             {navLinks.map((l) => (
@@ -263,7 +295,7 @@ export default function Index() {
 
       {/* Hero */}
       <section id="top" className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,153,0,0.08),transparent_50%),radial-gradient(circle_at_bottom_left,rgba(0,120,212,0.08),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,153,0,0.08),transparent_50%),radial_gradient(circle_at_bottom_left,rgba(0,120,212,0.08),transparent_50%)]" />
         <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:40px_40px]" />
         <div className="container mx-auto px-4 py-16 md:py-24 relative grid md:grid-cols-2 gap-10 items-center">
           <div className="text-center md:text-left">
@@ -364,14 +396,22 @@ export default function Index() {
               <Reveal key={p.title}>
                 <ThreeDCard className="h-full">
                   <div className="backdrop-blur bg-white/70 dark:bg-slate-800/60 rounded-2xl overflow-hidden shadow-[0_12px_35px_-12px_rgba(0,0,0,0.3)] border border-slate-200 dark:border-slate-700 h-full">
-                    <img src={p.img} alt={p.title} className="w-full h-40 object-cover" loading="lazy" />
-                    <div className="p-5">
-                      <h3 className="font-bold text-lg mb-1">{p.title}</h3>
-                      <p className="text-sm text-slate-600 dark:text-slate-300 mb-3">{p.desc}</p>
-                      <div className="flex flex-wrap gap-1.5">
-                        {p.tags.map((t) => <span key={t} className="text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-700">{t}</span>)}
+                    {p.interactive ? (
+                      <div className="p-5">
+                        <AwsVpcDiagram />
                       </div>
-                    </div>
+                    ) : (
+                      <>
+                        <img src={p.img} alt={p.title} className="w-full h-40 object-cover" loading="lazy" />
+                        <div className="p-5">
+                          <h3 className="font-bold text-lg mb-1">{p.title}</h3>
+                          <p className="text-sm text-slate-600 dark:text-slate-300 mb-3">{p.desc}</p>
+                          <div className="flex flex-wrap gap-1.5">
+                            {p.tags.map((t) => <span key={t} className="text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-700">{t}</span>)}
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </ThreeDCard>
               </Reveal>
